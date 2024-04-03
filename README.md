@@ -2,6 +2,25 @@
 
 This project is a Admin panel application built with React and other libraries. The application allows users to add new news articles, edit existing news articles, and delete news articles.
 
+## Getting started
+
+1. Clone the repository:
+
+```bash
+  git clone https://github.com/yash-chouhan/new2day-reactapp.git
+```
+2. Install the dependencies:
+
+```bash
+  cd book-store-frontend
+  npm install
+```
+3. Start the development server:
+
+```bash
+  npm start
+```
+
 ## Components
 
 ### CreateNewsFeed Component
