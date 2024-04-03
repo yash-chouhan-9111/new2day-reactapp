@@ -12,13 +12,13 @@ This project is a Admin panel application built with React and other libraries. 
 2. Install the dependencies:
 
 ```bash
-  cd book-store-frontend
+  cd new2day-reactapp
   npm install
 ```
 3. Start the development server:
 
 ```bash
-  npm start
+  npm run dev
 ```
 
 ## Components
