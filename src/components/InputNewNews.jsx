@@ -32,8 +32,8 @@ const InputNewNews = ({ close }) => {
 
   return (
     <div className="fixed top-0 left-0 z-50 py-10 w-screen flex justify-center items-center h-screen backdrop-blur-sm bg-gray-50/80 overflow-y-scroll">
-      <div className="bg-white border-4 rounded-lg shadow relative m-10">
-        <div className="flex items-start justify-between p-5 border-b rounded-t">
+      <div className="bg-white border-4 rounded-lg shadow relative m-10 max-w-3xl md:mt-5">
+        <div className="flex items-start justify-between px-5 pt-5 border-b rounded-t">
           <h3 className="text-xl font-semibold">Add Article</h3>
           <button
             type="button"

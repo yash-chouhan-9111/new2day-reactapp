@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiEdit } from "react-icons/fi";
 import { MdDeleteForever } from "react-icons/md";
 import axios from "axios";
@@ -8,12 +8,17 @@ import InputNews from "../components/InputNews";
 
 const ManageNewsFeed = () => {
   const {newsData, setNewsData, setToggleSubmit, editNews } = useAppContext()
+  const navigate = useNavigate()
   
   const truncateText = (text, limit) => {
     const words = text.split(" ");
     const truncatedText = words.slice(0, limit).join(" ");
     return truncatedText + (words.length > limit ? "..." : "");
   };
+
+  const detailNewsView= (link)=>{
+    navigate(`/detailfeed/${link}`)
+  }
 
   const removeNews = (id) => {
     const updatedNews = [...newsData];
@@ -75,7 +80,8 @@ const ManageNewsFeed = () => {
                   <tr className="bg-white border-b text-slate-950" key={index}>
                     <th
                       scope="row"
-                      className="px-2 font-medium text-gray-900 break-words truncate "
+                      onClick={()=>detailNewsView(newsData.indexOf(news))}
+                      className="px-2 font-medium text-gray-900 break-words truncate hover:underline cursor-pointer "
                     >
                       {truncateText(news.title, 5)}
                       {/* {news.title} */}
