@@ -40,6 +40,7 @@ const Sidebar = () => {
                   location.pathname === "/" && "bg-sky-600/10"
                 }  transition-colors duration-200 hover:bg-sky-600/20 focus:bg-sky-600/20 active:bg-sky-600/25`}
                 id="dashboard-tooltip"
+                onClick={() => setShowSidebar(!showSidebar)}
               >
                 <Tooltip
                   anchorSelect="#dashboard-tooltip"
@@ -68,6 +69,7 @@ const Sidebar = () => {
                   location.pathname === "/createnewsfeed" && "bg-sky-600/10"
                 } flex size-11 items-center justify-center rounded-lg outline-none transition-colors  duration-200 hover:bg-sky-600/20 focus:bg-sky-600/10 active:bg-sky-600/25`}
                 id="createNewsFeed"
+                onClick={() => setShowSidebar(!showSidebar)}
               >
                 <Tooltip
                   anchorSelect="#createNewsFeed"
@@ -95,6 +97,7 @@ const Sidebar = () => {
                   location.pathname === "/managenewsfeed" && "bg-sky-600/10"
                 } flex size-11 items-center justify-center rounded-lg outline-none transition-colors  duration-200 hover:bg-sky-600/20 focus:bg-sky-600/10 active:bg-sky-600/25`}
                 id="manageNewsFeed"
+                onClick={() => setShowSidebar(!showSidebar)}
               >
                 <Tooltip
                   anchorSelect="#manageNewsFeed"
@@ -122,6 +125,7 @@ const Sidebar = () => {
                   location.pathname === "/performancereport" && "bg-sky-600/10"
                 } flex size-11 items-center justify-center rounded-lg outline-none transition-colors  duration-200 hover:bg-sky-600/20 focus:bg-sky-600/10 active:bg-sky-600/25`}
                 id="performanceReportPage"
+                onClick={() => setShowSidebar(!showSidebar)}
               >
                 <Tooltip
                   anchorSelect="#performanceReportPage"
@@ -187,24 +191,28 @@ const Sidebar = () => {
               className={`flex items-center justify-center rounded-md p-2 text-base outline-none ${
                 location.pathname === "/" && "bg-sky-600/10 text-[#0B87FF]"
               } transition-colors duration-200 hover:bg-sky-600/20 focus:bg-sky-600/20 active:bg-sky-600/25`}
+              onClick={() => setShowSidebar(!showSidebar)}
             >
               Dashboards
             </Link>
             <Link
               to="/createnewsfeed"
               className={`flex items-center justify-center rounded-lg p-2 text-base outline-none ${ location.pathname === "/createnewsfeed" && "bg-sky-600/10 text-[#0B87FF]"} capitalize transition-colors duration-200 hover:bg-sky-600/20 focus:bg-sky-600/20 active:bg-sky-600/25`}
+              onClick={() => setShowSidebar(!showSidebar)}
             >
               create news feed
             </Link>
             <Link
               to="managenewsfeed"
               className={`flex items-center justify-center rounded-lg p-2 text-base outline-none ${ location.pathname === "/managenewsfeed" && "bg-sky-600/10 text-[#0B87FF]"} capitalize transition-colors duration-200 hover:bg-sky-600/20 focus:bg-sky-600/20 active:bg-sky-600/25`}
+              onClick={() => setShowSidebar(!showSidebar)}
             >
               Manage news feed
             </Link>
             <Link
               to="/performancereport"
               className={`flex items-center justify-center rounded-lg p-2 text-base outline-none ${ location.pathname === "/performancereport" && "bg-sky-600/10 text-[#0B87FF]"} capitalize transition-colors duration-200 hover:bg-sky-600/20 focus:bg-sky-600/20 active:bg-sky-600/25`}
+              onClick={() => setShowSidebar(!showSidebar)}
             >
               performance report
             </Link>

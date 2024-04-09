@@ -21,8 +21,8 @@ const Navbar = () => {
 
   return (
     <nav  className="flex items-center justify-between fixed right-0 top-0 z-30  pl-16 lg:pl-16 md:pl-2 sm:pl-2 w-full py-2 bg-white  border-b-1 shadow">
-      <div className=' px-4 flex items-center justify-between'> 
-        <h4 className={`md:hidden capitalize tracking-tighter lg:block ${screen.width > 650 ? 'hidden' : 'block'} `}>news2Day</h4>
+      <div className=' lg:px-4 md:px-2 sm:px-0 px-0 flex items-center justify-between'> 
+        <h4 className={`md:hidden sm:hidden capitalize tracking-tighter lg:block ${screen.width < 650 ? 'hidden' : 'block'} `}>news2Day</h4>
         <button className={`rounded-full p-0 text-sky-600 hover:text-sky-400 focus:text-sky-500   active:bg-slate-300/25 2xl:hidden xl:hidden lg:hidden`}onClick={()=>setShowSidebar(!showSidebar)}>
           <HiMenuAlt3 size={25}/>
         </button>
